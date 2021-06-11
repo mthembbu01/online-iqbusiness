@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  app:
+    image: 'iq/spring-boot-app:latest'
+    build:
+      context: .
+    container_name: gs-iq
+    ports:
+      - "8080:8083"
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://psql-db:5432/iq
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  db:
+    image: 'postgres:11'
+    container_name: psql-db
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      - POSTGRES_DB=iq
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
