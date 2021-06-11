@@ -8,13 +8,26 @@ services:
     container_name: gs-iq
     ports:
       - "8080:8083"
+    restart: always
     depends_on:
       - db
+    restart: always
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://psql-db:5432/iq
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  webapp:
+    image: 'iq/angular-app'
+    build:
+      context: webapp
+    container_name: gs-iq-webapp
+    ports: 
+      - "4200:80"
+    restart: always
+    depends_on: 
+      - app
 
   db:
     image: 'postgres:11'

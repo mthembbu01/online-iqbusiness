@@ -1,0 +1,21 @@
+<div class="wrapper fadeInDown">
+  <div id="formContentLogin">
+
+    <!--Icon -->
+    <div class="fadeIn first">
+
+      <img src="assets/img/logo2.jpg" id="icon" alt="User Icon" style="max-height: 150px;max-width: 150px">
+    </div>
+
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username" required="required">
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password" required="required">
+      <input type="button" class="fadeIn fourth" value="Log In" (click)="onSelect('loggedIn')">
+    </form>
+
+    <div id="formFooter">
+      <a class="underlineHover" href="#" (click)="onSelect('passwordReset')">Forgot Password/</a>
+      <a class="underlineHover" href="#" (click)="onSelect('register')">Sing-up</a>
+    </div>
+  </div>
+</div>

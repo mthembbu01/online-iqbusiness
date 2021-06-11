@@ -1,0 +1,48 @@
+<div class="container fadeInDown">
+  <div id="formContent" style="max-width: 100%" >
+    <!--Icon -->
+    <div class="text-center">
+      <div class="fadeIn first">
+        <img src="assets/img/logo_trans.png" id="icon" alt="User Icon" style="max-height: 150px;max-width: 150px">
+      </div>
+      <h2><i class="fa fa-lock fa-2x"></i> Register</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <form #registerForm="ngForm"  (ngSubmit)="onAddUser(registerForm)">
+          <div class="card">
+              <p>{{err}}</p>
+              <div class="card-header bg-light">Personal Details</div>
+
+              <div class="card-body">
+                  <div class="row">
+                    <div class="form-group col-sm-6">
+                      <label for="first_name">First Name</label>
+                      <input type="text" class="form-control" ngModel name="firstName" id="first_name" placeholder="First Name">
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                      <label for="lastName">Last Name</label>
+                      <input type="text" class="form-control" ngModel name="lastName" id="lastName" placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-sm-6">
+                      <label for="idNumber">ID Number</label>
+                      <input type="text" class="form-control" ngModel name="idNumber" id="idNumber" placeholder="ID Number">
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                      <label for="contactNumber">Cell Phone</label>
+                      <input type="text" class="form-control" ngModel name="contactNumber" id="contactNumber" placeholder="Cell Phone">
+                    </div>
+                  </div>
+              </div>
+         </div>
+          <input type="submit" class="fadeIn fourth" [disabled]="registerForm.invalid" value="Register">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
