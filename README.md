@@ -13,4 +13,4 @@ please ensure you have docker installed on your local environment
 
 4. $ docker compose up 
 
-This will start up your docker-compose.yamlfile
+This will start up your docker-compose.yaml file
