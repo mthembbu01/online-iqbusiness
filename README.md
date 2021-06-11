@@ -7,4 +7,4 @@ please ensure you have docker installed on your local environment
 
 1. Open your terminal and type $cd onlineiqbusiness
 
-2. $ D build --tag=
+2. $ docker build --tag=
