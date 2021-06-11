@@ -5,12 +5,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 please ensure you have docker installed on your local environment
 
-1. Open your terminal and type $cd online-iqbusiness
+1. Open the project from your terminal
+2. Type $ docker compose up
 
-2. $ docker build --tag=iq/spring-boot-app . 
+This will start the angular webapp, springboot app and the postgres sql server.
 
-3. $ docker build --tag=iq/webapp ./src/webapp
+open localhost:4200 to access the webapp
 
-4. $ docker compose up 
 
-This will execute your docker-compose.yaml file
