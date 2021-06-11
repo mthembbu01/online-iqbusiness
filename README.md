@@ -5,7 +5,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 please ensure you have docker installed on your local environment
 
-1. Open your terminal and type $cd onlineiqbusiness
+1. Open your terminal and type $cd online-iqbusiness
 
 2. $ docker build --tag=iq/spring-boot-app . 
 
