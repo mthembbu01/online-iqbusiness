@@ -11,4 +11,6 @@ please ensure you have docker installed on your local environment
 
 3. $ docker build --tag=iq/webapp ./src/webapp
 
-4.
+4. $ docker compose up 
+
+This will start up your docker-compose.yamlfile
